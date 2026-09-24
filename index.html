@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -58,6 +61,7 @@
             z-index: 0;
             filter: blur(40px);
         }
+
         .neon-ambient-tr {
             position: fixed;
             top: -10vw;
@@ -69,6 +73,7 @@
             z-index: 0;
             filter: blur(40px);
         }
+
         .neon-ambient-bl {
             position: fixed;
             bottom: -10vw;
@@ -80,6 +85,7 @@
             z-index: 0;
             filter: blur(40px);
         }
+
         .neon-ambient-br {
             position: fixed;
             bottom: -10vw;
@@ -126,8 +132,13 @@
         }
 
         @keyframes rotateConic {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .crown-icon {
@@ -140,8 +151,13 @@
         }
 
         @keyframes crownBounce {
-            0% { transform: rotate(18deg) translateY(0); }
-            100% { transform: rotate(18deg) translateY(-4px); }
+            0% {
+                transform: rotate(18deg) translateY(0);
+            }
+
+            100% {
+                transform: rotate(18deg) translateY(-4px);
+            }
         }
 
         /* Glow Animations */
@@ -173,13 +189,16 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: rgba(4, 9, 33, 0.8);
         }
+
         ::-webkit-scrollbar-thumb {
             background: rgba(0, 240, 255, 0.3);
             border-radius: 3px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(0, 240, 255, 0.6);
         }
@@ -206,11 +225,21 @@
         }
 
         @keyframes pulseCard {
-            0%, 100% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.2); border-color: rgba(0, 240, 255, 0.5); }
-            50% { box-shadow: 0 0 30px rgba(255, 0, 127, 0.4); border-color: rgba(255, 0, 127, 0.8); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+                border-color: rgba(0, 240, 255, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(255, 0, 127, 0.4);
+                border-color: rgba(255, 0, 127, 0.8);
+            }
         }
     </style>
 </head>
+
 <body class="relative flex flex-col justify-between min-h-screen">
 
     <!-- Ambient Neon Lights -->
@@ -222,29 +251,36 @@
     <!-- Header -->
     <header class="relative z-10 w-full px-4 py-4 md:px-8 border-b border-cyan-500/10 glass-panel">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            
+
             <!-- Logo & Brand Name -->
             <div class="flex items-center gap-3">
                 <div class="relative w-11 h-11 rounded-full p-[2px] logo-conic flex items-center justify-center">
                     <div class="w-full h-full bg-space rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-arrows-spin text-cyan-400 text-xl animate-spin" style="animation-duration: 12s;"></i>
+                        <i class="fa-solid fa-arrows-spin text-cyan-400 text-xl animate-spin"
+                            style="animation-duration: 12s;"></i>
                     </div>
                 </div>
                 <div class="relative">
-                    <h1 class="text-3xl md:text-4xl font-extrabold font-display tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-pink-500 inline-block pr-3">
-                        Ruleta<span class="relative inline-block text-cyan-400">z<span class="crown-icon text-yellow-300 text-lg">👑</span></span>o <span class="text-xs tracking-widest px-2 py-0.5 rounded-md bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold align-middle uppercase shadow-md shadow-pink-500/20">IA</span>
+                    <h1
+                        class="text-3xl md:text-4xl font-extrabold font-display tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-pink-500 inline-block pr-3">
+                        Ruleta<span class="relative inline-block text-cyan-400">z<span
+                                class="crown-icon text-yellow-300 text-lg">👑</span></span>o <span
+                            class="text-xs tracking-widest px-2 py-0.5 rounded-md bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold align-middle uppercase shadow-md shadow-pink-500/20">IA</span>
                     </h1>
-                    <p class="text-xs text-slate-400 font-medium tracking-wider">¡El juego de ruleta con preguntas inteligentes!</p>
+                    <p class="text-xs text-slate-400 font-medium tracking-wider">¡El juego de ruleta con preguntas
+                        inteligentes!</p>
                 </div>
             </div>
 
             <!-- Status Indicator / AI Mode Pill -->
             <div class="flex items-center gap-3">
-                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/30 text-xs">
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/30 text-xs">
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" id="statusDot"></span>
                     <span class="text-cyan-300 font-semibold" id="aiStatusText">Gemini AI Activo</span>
                 </div>
-                <button onclick="openApiKeyModal()" title="Configurar API Key de Gemini" class="p-2 rounded-full bg-slate-800/80 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white transition">
+                <button onclick="openApiKeyModal()" title="Configurar API Key de Gemini"
+                    class="p-2 rounded-full bg-slate-800/80 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white transition">
                     <i class="fa-solid fa-key text-sm"></i>
                 </button>
             </div>
@@ -252,11 +288,12 @@
     </header>
 
     <!-- Main App Container -->
-    <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <main
+        class="relative z-10 flex-grow max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
         <!-- LEFT PANEL: Controls, Participants & AI Configuration -->
         <section class="lg:col-span-5 flex flex-col gap-5 glass-panel p-5 md:p-6 rounded-3xl">
-            
+
             <!-- Category Selector -->
             <div>
                 <div class="flex items-center justify-between mb-3">
@@ -265,38 +302,51 @@
                     </label>
                     <span class="text-xs text-slate-400">Selecciona temática</span>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-2" id="categoryGrid">
-                    <button onclick="selectCategory('truthOrDare')" data-cat="truthOrDare" class="cat-btn active glass-card p-2.5 rounded-xl text-left">
+                    <button onclick="selectCategory('truthOrDare')" data-cat="truthOrDare"
+                        class="cat-btn active glass-card p-2.5 rounded-xl text-left">
                         <div class="text-lg">🎭 <span class="font-bold text-sm text-white">Verdad o Reto</span></div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Clásico revelador y divertido</p>
                     </button>
-                    <button onclick="selectCategory('mostLikely')" data-cat="mostLikely" class="cat-btn glass-card p-2.5 rounded-xl text-left">
-                        <div class="text-lg">👀 <span class="font-bold text-sm text-white">¿Quién es más...?</span></div>
+                    <button onclick="selectCategory('mostLikely')" data-cat="mostLikely"
+                        class="cat-btn glass-card p-2.5 rounded-xl text-left">
+                        <div class="text-lg">👀 <span class="font-bold text-sm text-white">¿Quién es más...?</span>
+                        </div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Apuesta por tus amigos</p>
                     </button>
-                    <button onclick="selectCategory('funChallenges')" data-cat="funChallenges" class="cat-btn glass-card p-2.5 rounded-xl text-left">
+                    <button onclick="selectCategory('funChallenges')" data-cat="funChallenges"
+                        class="cat-btn glass-card p-2.5 rounded-xl text-left">
                         <div class="text-lg">🔥 <span class="font-bold text-sm text-white">Retos y Castigos</span></div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Desafíos físicos y cómicos</p>
                     </button>
-                    <button onclick="selectCategory('trivia')" data-cat="trivia" class="cat-btn glass-card p-2.5 rounded-xl text-left">
-                        <div class="text-lg">🧠 <span class="font-bold text-sm text-white">Preguntas Curiosas</span></div>
+                    <button onclick="selectCategory('trivia')" data-cat="trivia"
+                        class="cat-btn glass-card p-2.5 rounded-xl text-left">
+                        <div class="text-lg">🧠 <span class="font-bold text-sm text-white">Preguntas Curiosas</span>
+                        </div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Trivia rara y sorpresas</p>
                     </button>
-                    <button onclick="selectCategory('prizePenance')" data-cat="prizePenance" class="cat-btn glass-card p-2.5 rounded-xl text-left">
-                        <div class="text-lg">🏆 <span class="font-bold text-sm text-white">Premio / Penitencia</span></div>
+                    <button onclick="selectCategory('prizePenance')" data-cat="prizePenance"
+                        class="cat-btn glass-card p-2.5 rounded-xl text-left">
+                        <div class="text-lg">🏆 <span class="font-bold text-sm text-white">Premio / Penitencia</span>
+                        </div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Recompensa o castigo</p>
                     </button>
-                    <button onclick="selectCategory('custom')" data-cat="custom" class="cat-btn glass-card p-2.5 rounded-xl text-left">
-                        <div class="text-lg">🤔 <span class="font-bold text-sm text-white">Haz tu pregunta</span></div>
+                    <button onclick="selectCategory('custom')" data-cat="custom"
+                        class="cat-btn glass-card p-2.5 rounded-xl text-left">
+                        <div class="text-lg">😏 <span class="font-bold text-sm text-white">Haz tu pregunta</span></div>
                         <p class="text-[10px] text-slate-400 leading-tight mt-0.5">Escribe tu propio reto</p>
                     </button>
                 </div>
 
                 <!-- Custom Question Input Area (Oculto por defecto) -->
-                <div id="customQuestionContainer" class="hidden mt-3 p-3 bg-slate-950/80 border border-amber-500/50 rounded-2xl">
-                    <label class="text-xs font-bold text-amber-300 block mb-1">✍️ Escribe tu pregunta o reto personalizado:</label>
-                    <input type="text" id="customQuestionInput" oninput="updateCustomQuestionText()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400" placeholder="Ej: ¿Quién fue tu primer amor? o Haz 10 flexiones de pecho">
+                <div id="customQuestionContainer"
+                    class="hidden mt-3 p-3 bg-slate-950/80 border border-amber-500/50 rounded-2xl">
+                    <label class="text-xs font-bold text-amber-300 block mb-1">✍️ Escribe tu pregunta o reto
+                        personalizado:</label>
+                    <input type="text" id="customQuestionInput" oninput="updateCustomQuestionText()"
+                        class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
+                        placeholder="Ej: ¿Quién fue tu primer amor? o Haz 10 flexiones de pecho">
                 </div>
             </div>
 
@@ -304,21 +354,26 @@
             <div class="flex flex-col gap-2">
                 <div class="flex items-center justify-between">
                     <label class="text-sm font-bold uppercase tracking-wider text-cyan-300 flex items-center gap-2">
-                        <i class="fa-solid fa-users text-purple-400"></i> Participantes (<span id="participantCount">0</span>)
+                        <i class="fa-solid fa-users text-purple-400"></i> Participantes (<span
+                            id="participantCount">0</span>)
                     </label>
                     <!-- Preset Loaders -->
                     <div class="flex gap-1">
-                        <button onclick="loadPreset('party')" class="text-[11px] bg-slate-800 hover:bg-cyan-900/60 text-slate-300 hover:text-cyan-200 px-2 py-0.5 rounded border border-slate-700 transition">Fiesta</button>
-                        <button onclick="loadPreset('office')" class="text-[11px] bg-slate-800 hover:bg-cyan-900/60 text-slate-300 hover:text-cyan-200 px-2 py-0.5 rounded border border-slate-700 transition">Oficina</button>
-                        <button onclick="loadPreset('clear')" class="text-[11px] bg-red-950/40 hover:bg-red-900/60 text-red-300 px-2 py-0.5 rounded border border-red-800/40 transition">Borrar</button>
+                        <!-- <button onclick="loadPreset('party')" class="text-[11px] bg-slate-800 hover:bg-cyan-900/60 text-slate-300 hover:text-cyan-200 px-2 py-0.5 rounded border border-slate-700 transition">Fiesta</button>
+                        <button onclick="loadPreset('office')" class="text-[11px] bg-slate-800 hover:bg-cyan-900/60 text-slate-300 hover:text-cyan-200 px-2 py-0.5 rounded border border-slate-700 transition">Oficina</button> -->
+                        <button onclick="loadPreset('clear')"
+                            class="text-[11px] bg-red-950/40 hover:bg-red-900/60 text-red-300 px-2 py-0.5 rounded border border-red-800/40 transition">Borrar</button>
                     </div>
                 </div>
-                <textarea id="participantsInput" rows="4" oninput="updateParticipants()" class="w-full bg-slate-950/80 border border-slate-700/80 focus:border-cyan-400 rounded-2xl p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition" placeholder="Ingrese los participantes (uno por línea)..."></textarea>
+                <textarea id="participantsInput" rows="4" oninput="updateParticipants()"
+                    class="w-full bg-slate-950/80 border border-slate-700/80 focus:border-cyan-400 rounded-2xl p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition"
+                    placeholder="Ingrese los participantes (uno por línea)..."></textarea>
             </div>
 
             <!-- Generate AI Question Manually Button -->
             <div class="pt-1">
-                <button onclick="generateAIQuestion()" id="genAiBtn" class="w-full py-3 px-4 rounded-2xl font-bold text-white text-sm glow-ai-btn flex items-center justify-center gap-2 transition active:scale-95">
+                <button onclick="generateAIQuestion()" id="genAiBtn"
+                    class="w-full py-3 px-4 rounded-2xl font-bold text-white text-sm glow-ai-btn flex items-center justify-center gap-2 transition active:scale-95">
                     <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i>
                     <span id="genAiBtnText">✨ Generar Nueva Pregunta IA</span>
                 </button>
@@ -327,10 +382,12 @@
             <!-- AI Question / Challenge Active Card -->
             <div id="aiQuestionBox" class="glass-panel p-4 rounded-2xl ai-pulse-card relative overflow-hidden">
                 <div class="flex items-center justify-between mb-1.5">
-                    <span class="text-[11px] uppercase tracking-wider font-extrabold text-pink-400 flex items-center gap-1">
+                    <span
+                        class="text-[11px] uppercase tracking-wider font-extrabold text-pink-400 flex items-center gap-1">
                         <i class="fa-solid fa-brain"></i> <span id="cardHeaderTitle">Desafío Generado por IA</span>
                     </span>
-                    <span id="aiCategoryTag" class="text-[10px] px-2 py-0.5 rounded-full bg-purple-900/60 text-purple-200 font-semibold border border-purple-500/30">
+                    <span id="aiCategoryTag"
+                        class="text-[10px] px-2 py-0.5 rounded-full bg-purple-900/60 text-purple-200 font-semibold border border-purple-500/30">
                         🎭 Verdad o Reto
                     </span>
                 </div>
@@ -338,7 +395,8 @@
                     "Presiona 'Generar Pregunta' o gira la ruleta para obtener tu reto."
                 </p>
                 <!-- Loading Overlay -->
-                <div id="aiLoadingOverlay" class="hidden absolute inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center gap-2">
+                <div id="aiLoadingOverlay"
+                    class="hidden absolute inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center gap-2">
                     <i class="fa-solid fa-spinner animate-spin text-cyan-400 text-xl"></i>
                     <span class="text-xs font-semibold text-cyan-200">Consultando a Gemini IA...</span>
                 </div>
@@ -347,24 +405,31 @@
         </section>
 
         <!-- RIGHT PANEL: Interactive HTML5 Canvas Roulette Wheel -->
-        <section class="lg:col-span-7 flex flex-col items-center justify-center glass-panel p-6 rounded-3xl relative min-h-[500px]">
-            
+        <section
+            class="lg:col-span-7 flex flex-col items-center justify-center glass-panel p-6 rounded-3xl relative min-h-[500px]">
+
             <!-- Floating Sparkle Elements -->
             <i class="fa-solid fa-sparkles absolute top-6 left-8 text-cyan-400 text-lg opacity-40 animate-pulse"></i>
-            <i class="fa-solid fa-star absolute bottom-12 right-10 text-pink-400 text-sm opacity-30 animate-ping" style="animation-duration: 3s;"></i>
+            <i class="fa-solid fa-star absolute bottom-12 right-10 text-pink-400 text-sm opacity-30 animate-ping"
+                style="animation-duration: 3s;"></i>
 
             <!-- Pointer Arrow (Top center 12 o'clock) -->
             <div class="relative z-30 mb-[-24px] pointer-shadow">
-                <div class="w-0 h-0 border-l-[18px] border-l-transparent border-r-[18px] border-r-transparent border-t-[36px] border-t-pink-500 filter drop-shadow-[0_0_12px_rgba(255,0,127,0.9)]"></div>
+                <div
+                    class="w-0 h-0 border-l-[18px] border-l-transparent border-r-[18px] border-r-transparent border-t-[36px] border-t-pink-500 filter drop-shadow-[0_0_12px_rgba(255,0,127,0.9)]">
+                </div>
             </div>
 
             <!-- Canvas Wheel Container -->
             <div class="relative w-full max-w-[420px] aspect-square flex items-center justify-center my-2">
-                <canvas id="rouletteCanvas" width="800" height="800" class="w-full h-full drop-shadow-[0_0_25px_rgba(0,240,255,0.25)] rounded-full"></canvas>
-                
+                <canvas id="rouletteCanvas" width="800" height="800"
+                    class="w-full h-full drop-shadow-[0_0_25px_rgba(0,240,255,0.25)] rounded-full"></canvas>
+
                 <!-- Center Cap / Logo -->
-                <div class="absolute inset-0 m-auto w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-slate-900 via-slate-950 to-purple-950 rounded-full border-4 border-cyan-400/80 shadow-[0_0_20px_rgba(0,240,255,0.6)] flex items-center justify-center pointer-events-none">
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-400 flex items-center justify-center">
+                <div
+                    class="absolute inset-0 m-auto w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-slate-900 via-slate-950 to-purple-950 rounded-full border-4 border-cyan-400/80 shadow-[0_0_20px_rgba(0,240,255,0.6)] flex items-center justify-center pointer-events-none">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-400 flex items-center justify-center">
                         <span class="text-xs font-black text-slate-950">👑</span>
                     </div>
                 </div>
@@ -375,7 +440,8 @@
 
             <!-- Massive Spin Button -->
             <div class="mt-6 w-full max-w-xs">
-                <button id="spinBtn" onclick="spinRoulette()" class="w-full py-4 px-6 rounded-2xl font-black text-slate-950 text-xl tracking-wider uppercase glow-button flex items-center justify-center gap-3 transition">
+                <button id="spinBtn" onclick="spinRoulette()"
+                    class="w-full py-4 px-6 rounded-2xl font-black text-slate-950 text-xl tracking-wider uppercase glow-button flex items-center justify-center gap-3 transition">
                     <i class="fa-solid fa-play text-xl"></i>
                     <span>¡GIRAR!</span>
                 </button>
@@ -385,28 +451,35 @@
     </main>
 
     <!-- WINNER / RESULT MODAL -->
-    <div id="winnerModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="glass-panel p-6 md:p-8 rounded-3xl max-w-lg w-full border-2 border-pink-500/60 shadow-[0_0_50px_rgba(255,0,127,0.4)] text-center relative">
-            
-            <button onclick="closeWinnerModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition">
+    <div id="winnerModal"
+        class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div
+            class="glass-panel p-6 md:p-8 rounded-3xl max-w-lg w-full border-2 border-pink-500/60 shadow-[0_0_50px_rgba(255,0,127,0.4)] text-center relative">
+
+            <button onclick="closeWinnerModal()"
+                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <!-- Crown badge header -->
-            <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-pink-500 via-purple-600 to-cyan-400 mx-auto mb-3 p-[3px] shadow-[0_0_25px_rgba(255,0,127,0.6)]">
+            <div
+                class="w-16 h-16 rounded-full bg-gradient-to-tr from-pink-500 via-purple-600 to-cyan-400 mx-auto mb-3 p-[3px] shadow-[0_0_25px_rgba(255,0,127,0.6)]">
                 <div class="w-full h-full bg-space rounded-full flex items-center justify-center text-2xl">
                     🎯
                 </div>
             </div>
 
-            <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-300">¡Sujeto Elegido por la Ruleta!</span>
-            <h2 id="modalWinnerName" class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-400 to-cyan-300 my-2 font-display">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-300">¡Persona Elegida por la
+                Ruleta!</span>
+            <h2 id="modalWinnerName"
+                class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-400 to-cyan-300 my-2 font-display">
                 Nombre
             </h2>
 
             <!-- Challenge / Question Assigned -->
             <div class="bg-slate-900/90 border border-cyan-500/30 p-4 rounded-2xl my-4 text-left">
-                <span id="modalCategoryBadge" class="text-[10px] font-bold uppercase tracking-wider text-pink-400 block mb-1">
+                <span id="modalCategoryBadge"
+                    class="text-[10px] font-bold uppercase tracking-wider text-pink-400 block mb-1">
                     🎭 Tu Desafío:
                 </span>
                 <p id="modalQuestionText" class="text-sm md:text-base font-medium text-slate-100 italic">
@@ -416,11 +489,13 @@
 
             <!-- Modal Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-3 mt-6">
-                <button onclick="removeWinnerAndClose()" class="flex-1 py-3 px-4 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-200 font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                <button onclick="removeWinnerAndClose()"
+                    class="flex-1 py-3 px-4 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-200 font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
                     <i class="fa-solid fa-user-minus"></i>
                     <span>Eliminar de la lista</span>
                 </button>
-                <button onclick="closeWinnerModal()" class="flex-1 py-3 px-4 rounded-xl glow-button text-slate-950 font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                <button onclick="closeWinnerModal()"
+                    class="flex-1 py-3 px-4 rounded-xl glow-button text-slate-950 font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
                     <i class="fa-solid fa-rotate-right"></i>
                     <span>Siguiente Ronda</span>
                 </button>
@@ -430,7 +505,8 @@
     </div>
 
     <!-- GEMINI API KEY MODAL -->
-    <div id="apiKeyModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="apiKeyModal"
+        class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="glass-panel p-6 rounded-3xl max-w-md w-full border border-cyan-500/40 text-left relative">
             <button onclick="closeApiKeyModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
                 <i class="fa-solid fa-xmark"></i>
@@ -439,19 +515,27 @@
                 <i class="fa-solid fa-key"></i> Configuración de Gemini API
             </h3>
             <p class="text-xs text-slate-300 mb-4">
-                Puedes colocar tu propia API Key de Google Gemini para consultas personalizadas ilimitadas, o dejar en blanco para usar la clave por defecto.
+                Puedes colocar tu propia API Key de Google Gemini para consultas personalizadas ilimitadas, o dejar en
+                blanco para usar la clave por defecto.
             </p>
-            <input type="password" id="customApiKeyInput" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-cyan-400 mb-4" placeholder="AIzaSy...">
+            <input type="password" id="customApiKeyInput"
+                class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-cyan-400 mb-4"
+                placeholder="AIzaSy...">
             <div class="flex justify-end gap-2">
-                <button onclick="closeApiKeyModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700">Cancelar</button>
-                <button onclick="saveApiKey()" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold">Guardar Clave</button>
+                <button onclick="closeApiKeyModal()"
+                    class="px-4 py-2 rounded-xl bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700">Cancelar</button>
+                <button onclick="saveApiKey()"
+                    class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold">Guardar
+                    Clave</button>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="relative z-10 w-full py-3 px-4 text-center text-xs text-slate-500 border-t border-slate-800/40 glass-panel">
-        <p>Ruletazo IA &copy; 2026 - Desarrollado por Natto Barrera - Potenciado con Google Gemini API & HTML5 Canvas</p>
+    <footer
+        class="relative z-10 w-full py-3 px-4 text-center text-xs text-slate-500 border-t border-slate-800/40 glass-panel">
+        <p>Ruletazo IA &copy; 2026 - Desarrollado por Natto Barrera - Potenciado con Google Gemini API & HTML5 Canvas
+        </p>
     </footer>
 
     <!-- JavaScript Principal del Juego -->
@@ -459,7 +543,7 @@
         // Variables de Estado Global
         window.GEMINI_API_KEY = window.GEMINI_API_KEY || "";
         let customApiKey = localStorage.getItem('ruletazo_gemini_key') || "";
-        
+
         let participants = []; // Inicializado completamente vacío
         let activeCategory = "truthOrDare";
         let currentAiQuestion = "Presiona 'Generar Pregunta', o gira la ruleta para obtener tu reto.";
@@ -485,24 +569,50 @@
                 "VERDAD: ¿Qué es lo más vergonzoso que has buscado en tu navegador esta semana?",
                 "RETO: Manda un mensaje de voz diciendo 'Te extraño mi pastelito' al tercer contacto de tu WhatsApp.",
                 "VERDAD: ¿Alguna vez has mentido para faltar al trabajo o estudio? Cuenta el chisme entero.",
-                "RETO: Intenta imitar el sonido y movimiento de una gallina por 15 segundos."
+                "RETO: Intenta imitar el sonido y movimiento de una gallina por 15 segundos.",
+                "VERDAD: ¿Cuál es el secreto de otra persona presente que tú sabes pero no deberías saber?",
+                "RETO: Deja que la persona a tu derecha te dibuje un bigote con un plumón o labial.",
+                "VERDAD: ¿Qué es lo peor que has hecho por celos?",
+                "RETO: Entra a tu red social más usada y dale 'Me Gusta' a las primeras 5 publicaciones que veas sin importar de quién sean.",
+                "VERDAD: ¿Has fingido que te gusta un regalo horrible solo para no hacer sentir mal a alguien?",
+                "RETO: Haz una llamada ficticia en voz alta simulando que estás rompiendo con alguien imaginario."
             ],
             mostLikely: [
                 "¿Quién es más probable que termine detenido por una confusión tonta?",
                 "¿Quién es más probable que se vuelva millonario y lo pierda todo rápidamente?",
-                "¿Quién es más probable que sobreviva a un apocalipsis zombi?"
+                "¿Quién es más probable que sobreviva a un apocalipsis zombi?",
+                "¿Quién es más probable que se quede dormido en un lugar o evento público e importante?",
+                "¿Quién es más probable que responda un mensaje 3 días después argumentando 'se me olvidó responderte en la mente'?",
+                "¿Quién es más probable que gaste todo su sueldo en compras impulsivas por internet a las 2 AM?",
+                "¿Quién es más probable que confunda a un desconocido con un amigo en la calle y le dé un abrazo?",
+                "¿Quién es más probable que se vuelva famoso por un meme o video viral vergonzoso?"
             ],
             funChallenges: [
                 "RETO: Habla con acento dramático de telenovela durante las próximas 3 rondas.",
-                "CASTIGO: Haz 10 sentadillas mientras dices algo bonito de la persona a tu izquierda."
+                "CASTIGO: Haz 10 sentadillas mientras dices algo bonito de la persona a tu izquierda.",
+                "RETO: Mantén una postura de estatua congelada hasta que vuelva a ser tu turno.",
+                "CASTIGO: Ponte los zapatos en los pies contrarios (izquierdo en derecho) por las siguientes 2 rondas.",
+                "RETO: Intenta hacer reír a los demás en menos de 30 segundos usando solo gestos faciales, sin hablar.",
+                "CASTIGO: Canta el coro de tu canción favorita usando solo el sonido 'Muuuu' como vaca.",
+                "RETO: Improvisa un rap de 20 segundos describiendo lo que hay dentro de la habitación."
             ],
             trivia: [
                 "TRIVIA: ¿Cuál es el único mamífero capaz de volar verdaderamente? (Murciélago)",
-                "CURIOSEANDO: ¿Qué animal duerme con un ojo abierto? A) Delfín B) Búho C) Tiburón"
+                "CURIOSEANDO: ¿Qué animal duerme con un ojo abierto? A) Delfín B) Búho C) Tiburón (Respuesta: A)",
+                "TRIVIA: ¿En qué año llegó el hombre a la Luna por primera vez? (1969)",
+                "CURIOSEANDO: ¿Cuál es el músculo más fuerte del cuerpo humano en relación con su tamaño? A) Bíceps B) Masetero/Mandíbula C) Lengua (Respuesta: B)",
+                "TRIVIA: ¿Cuál es el país más pequeño del mundo? (Ciudad del Vaticano)",
+                "CURIOSEANDO: Los pulpos tienen 3 corazones y su sangre es de color... A) Azul B) Amarilla C) Verde (Respuesta: A)",
+                "TRIVIA: ¿Qué elemento químico tiene el símbolo 'Au' en la tabla periódica? (Oro)"
             ],
             prizePenance: [
                 "🏆 PREMIO: ¡Te salvaste! Tienes derecho a mandarle un reto corto a quien elijas.",
-                "💀 PENITENCIA: Imita el baile de un robot descompuesto durante 15 segundos."
+                "💀 PENITENCIA: Imita el baile de un robot descompuesto durante 15 segundos.",
+                "🏆 PREMIO: Comodín absoluto. Puedes ignorar tu siguiente reto o pregunta sin recibir penalización.",
+                "💀 PENITENCIA: Ponte una prenda de vestir al revés por el resto del juego.",
+                "🏆 PREMIO: 'Escudo de Reflejo'. Si alguien te impone un reto, puedes reflejárselo y obligarlo a hacerlo él.",
+                "💀 PENITENCIA: Déjate despeinar por completo por todos los participantes.",
+                "🏆 PREMIO: 'Dictador por un turno'. Elige quién responderá o hará el próximo elemento del juego."
             ]
         };
 
@@ -527,7 +637,7 @@
                     gain.connect(this.ctx.destination);
                     osc.start();
                     osc.stop(this.ctx.currentTime + 0.03);
-                } catch(e) {}
+                } catch (e) { }
             }
             playWinFanfare() {
                 try {
@@ -547,7 +657,7 @@
                         osc.start(startTime);
                         osc.stop(startTime + 0.3);
                     });
-                } catch(e) {}
+                } catch (e) { }
             }
         }
 
@@ -560,7 +670,7 @@
         });
 
         // Cambiar Categoría
-        window.selectCategory = function(cat) {
+        window.selectCategory = function (cat) {
             activeCategory = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => {
                 if (btn.dataset.cat === cat) {
@@ -578,7 +688,7 @@
 
             if (cat === 'custom') {
                 customContainer.classList.remove('hidden');
-                document.getElementById('aiCategoryTag').innerText = "🤔 Pregunta Personal";
+                document.getElementById('aiCategoryTag').innerText = "😏 Pregunta Personal";
                 genBtn.innerText = "✍️ Usar Pregunta Personal";
                 statusText.innerText = "Modo Manual";
                 statusDot.className = "w-2.5 h-2.5 rounded-full bg-amber-400";
@@ -590,7 +700,7 @@
                 statusText.innerText = "Gemini AI Activo";
                 statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping";
                 cardTitle.innerText = "Desafío Generado por IA";
-                
+
                 const tagNames = {
                     truthOrDare: "🎭 Verdad o Reto",
                     mostLikely: "👀 ¿Quién es más...?",
@@ -604,7 +714,7 @@
         };
 
         // Actualizar pregunta personalizada desde el Input
-        window.updateCustomQuestionText = function() {
+        window.updateCustomQuestionText = function () {
             if (activeCategory === 'custom') {
                 const text = document.getElementById('customQuestionInput').value.trim();
                 currentAiQuestion = text !== "" ? text : "Escribe tu pregunta en el cuadro superior...";
@@ -613,7 +723,7 @@
         };
 
         // Generar pregunta (IA o Manual)
-        window.generateAIQuestion = async function(winnerName = "") {
+        window.generateAIQuestion = async function (winnerName = "") {
             if (activeCategory === 'custom') {
                 updateCustomQuestionText();
                 return currentAiQuestion;
@@ -668,7 +778,7 @@
         };
 
         // Actualizar la lista de Participantes
-        window.updateParticipants = function() {
+        window.updateParticipants = function () {
             const rawText = document.getElementById('participantsInput').value;
             participants = rawText.split('\n').map(p => p.trim()).filter(p => p.length > 0);
             document.getElementById('participantCount').innerText = participants.length;
@@ -676,13 +786,9 @@
         };
 
         // Cargar Presets de nombres
-        window.loadPreset = function(type) {
+        window.loadPreset = function (type) {
             const input = document.getElementById('participantsInput');
-            if (type === 'party') {
-                input.value = "Carlos\nSofía\nMateo\nValeria\nLucas\nCamila";
-            } else if (type === 'office') {
-                input.value = "Jefe Andrés\nAna María\nPedro\nLaura\nDiego";
-            } else if (type === 'clear') {
+            if (type === 'clear') {
                 input.value = "";
             }
             updateParticipants();
@@ -773,7 +879,7 @@
         }
 
         // Girar Ruleta
-        window.spinRoulette = function() {
+        window.spinRoulette = function () {
             if (isSpinning) return;
             if (participants.length === 0) {
                 alert("Por favor ingresa al menos un participante en el panel izquierdo.");
@@ -795,7 +901,7 @@
                 const progress = Math.min(elapsed / duration, 1);
                 // Ease Out Cubic
                 const easeOut = 1 - Math.pow(1 - progress, 3);
-                
+
                 currentAngle = startAngle + targetRotation * easeOut;
                 drawRoulette();
 
@@ -813,7 +919,7 @@
                 } else {
                     isSpinning = false;
                     document.getElementById('spinBtn').disabled = false;
-                    
+
                     // Calcular Ganador en la flecha superior (270 grados / 12 o'clock)
                     const anglePerSegment = (Math.PI * 2) / numSegments;
                     let winningIndex = Math.floor(((1.5 * Math.PI - (currentAngle % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2)) / anglePerSegment);
@@ -830,7 +936,7 @@
         // Mostrar Modal del Ganador
         async function showWinner(winnerName) {
             soundEngine.playWinFanfare();
-            
+
             // Lanzar Confeti
             if (typeof confetti === 'function') {
                 confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
@@ -850,11 +956,11 @@
             document.getElementById('winnerModal').classList.remove('hidden');
         }
 
-        window.closeWinnerModal = function() {
+        window.closeWinnerModal = function () {
             document.getElementById('winnerModal').classList.add('hidden');
         };
 
-        window.removeWinnerAndClose = function() {
+        window.removeWinnerAndClose = function () {
             if (lastWinnerName) {
                 participants = participants.filter(p => p !== lastWinnerName);
                 document.getElementById('participantsInput').value = participants.join('\n');
@@ -864,16 +970,16 @@
         };
 
         // Manejo de Modal API Key
-        window.openApiKeyModal = function() {
+        window.openApiKeyModal = function () {
             document.getElementById('customApiKeyInput').value = customApiKey;
             document.getElementById('apiKeyModal').classList.remove('hidden');
         };
 
-        window.closeApiKeyModal = function() {
+        window.closeApiKeyModal = function () {
             document.getElementById('apiKeyModal').classList.add('hidden');
         };
 
-        window.saveApiKey = function() {
+        window.saveApiKey = function () {
             customApiKey = document.getElementById('customApiKeyInput').value.trim();
             localStorage.setItem('ruletazo_gemini_key', customApiKey);
             closeApiKeyModal();
@@ -881,4 +987,5 @@
         };
     </script>
 </body>
+
 </html>
