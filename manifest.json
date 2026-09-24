@@ -1,6 +1,6 @@
 {
-  "name": "Ruletazo IA - Ruleta de Fiestas",
-  "short_name": "Ruletazo IA",
+  "name": "Ruletazo - Ruleta para Fiestas y Diversión",
+  "short_name": "Ruletazo",
   "description": "Juego de ruleta interactivo para reuniones y fiestas con Inteligencia Artificial.",
   "start_url": "./index.html",
   "display": "standalone",
