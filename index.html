@@ -288,10 +288,12 @@
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" id="statusDot"></span>
                     <span class="text-cyan-300 font-semibold" id="aiStatusText">Gemini AI Activo</span>
                 </div>
+                
+                <!-- Desactivo el boton para no mostrar la llave de la api key
                 <button onclick="openApiKeyModal()" title="Configurar API Key de Gemini"
                     class="p-2 rounded-full bg-slate-800/80 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white transition">
                     <i class="fa-solid fa-key text-sm"></i>
-                </button>
+                </button> -->
             </div>
         </div>
     </header>
@@ -741,7 +743,7 @@
             const overlay = document.getElementById('aiLoadingOverlay');
             overlay.classList.remove('hidden');
 
-            const activeKey = customApiKey || window.GEMINI_API_KEY || "";
+            const activeKey = customApiKey || "AQ.Ab8RN6I0sixng4Uvq9FUdzs25-mKW7g70TZU_jdKiUFx7AyCVQ";
             let generatedText = "";
 
             const categoryPrompts = {
